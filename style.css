@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: hsl(30, 38%, 92%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+
+.card {
+    width: 60rem;
+    height: 45rem;
+    height: auto;
+    display: flex;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 50%;
+}
+
+.card-image .mobile {
+    display: none;
+}
+
+.card-image .desktop {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.container {
+    padding: 0 3rem;
+    width: 50%;
+}
+
+.card .container .sub-title {
+    font-size: 1.2rem;
+    letter-spacing: 0.5rem;
+    margin-top: 3rem;
+    font-weight: 500;
+    text-align: left;
+    text-transform: uppercase;
+    color: hsl(228, 12%, 48%);
+}
+
+.card .container .title {
+    font-size: 3.2rem;
+    /* letter-spacing: 0.1rem; */
+    color: hsl(212, 21%, 14%); 
+    line-height: 3.2rem;
+    font-weight: 700;
+    margin: 2.6rem 0;
+    font-family: "Fraunces", sans-serif;
+}
+
+.card .container .description {
+    font-size: 1.4rem;
+    color:hsl(228, 12%, 48%);
+    font-weight: 500;
+    margin-bottom: 2.6rem;
+    line-height: 2.2rem;
+}
+
+.card .container .container-price {
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+}
+
+.card .container .container-price .price {
+    font-size: 3.2rem;
+    font-family: "Fraunces", sans-serif;
+    font-weight: 700;
+    color: hsl(158, 36%, 37%);
+}
+
+.card .container .container-price .price-2 {
+    font-size: 1.4rem;
+    color:hsl(228, 12%, 48%);
+    font-weight: 500;
+}
+
+.card .container .container-btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.card .container .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    line-height: 4.8rem;
+    background-color: hsl(158, 36%, 37%);
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    border-radius: .8rem;
+    transition: background 200ms linear;
+    margin-top: 2.6rem;
+}
+
+.card .container .btn:hover {
+    background-color: hsl(156, 42%, 18%);
+}
+
+@media only screen and (max-width: 37.5em){
+
+    body {
+        height: auto;
+        padding: 2.8rem 1.6rem;
+    }
+    .card {
+        flex-direction: column;
+    }
+
+    .card-image {
+        width: 100%;
+    }
+
+    .card-image .desktop {
+        display: none;
+    }
+
+    .card-image .mobile {
+        display: block;
+        width: 100%;
+    }
+    .container {
+        width: 100%;
+    }
+
+    .btn {
+        margin-bottom: 2.5rem;
+    }
+}
